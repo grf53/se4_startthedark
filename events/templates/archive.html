@@ -1,7 +1,8 @@
 {% extends "base.html" %}
+
 {% load events_tags %}
 
-{% block title %} Tonight - {{ block.super }}{% endblock %}
+{% block title %} Archive - {{ block.super }}{% endblock %}
 
 {% block main_content %}
 	<a href="{% url 'ev_create' %}">Create an Event</a>
