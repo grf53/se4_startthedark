@@ -24,7 +24,7 @@ SECRET_KEY = '(^dyqt)1gci^4(_y7lm8dh%2d)yms2@$01t$fxaz#o=l!2m9j)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-# TEMPLATE_DEBUG = True # CAUSES WARNING
+# TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
