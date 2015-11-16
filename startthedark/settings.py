@@ -24,9 +24,13 @@ SECRET_KEY = '(^dyqt)1gci^4(_y7lm8dh%2d)yms2@$01t$fxaz#o=l!2m9j)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+ADMINS = (
+	('woorak', 'grf53@naver.com')
+)
 
 # Application definition
 
@@ -37,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'events',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -55,7 +60,7 @@ ROOT_URLCONF = 'startthedark.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,6 +86,10 @@ DATABASES = {
     }
 }
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = 'http://localhost:8000/media/admin/'
+LOGIN_REDIRECT_URL = '/'
+ADMIN_MEDIA_PREFIX = '/media/admin/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
