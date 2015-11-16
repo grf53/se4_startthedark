@@ -1,4 +1,4 @@
-from django.shortcuts import render, render_to_response, get_object_or_404
+from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from events.models import Event, Attendance
 from dateutil.parser import parse
